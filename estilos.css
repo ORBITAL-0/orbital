@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+img {
+  border-radius: 10px;
+}
+#programamarte, #ungransalto, #vanguardia {
+  background-color: lightblue;
+}
+.logo {
+  border: 2px solid black;
+}
