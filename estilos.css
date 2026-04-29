@@ -5,6 +5,7 @@ body {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 249, 240);
 }
+
 /* variables */
 :root {
   --color-bg: #000000;
@@ -186,4 +187,55 @@ a {
 
 a:hover {
   color: #b38cff;
+}
+
+/* nav principal */
+nav#principal {
+  position: relative;
+}
+
+nav#principal button {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+nav#principal button:hover {
+  background: var(--color-border);
+}
+
+nav#principal ul {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  min-width: 220px;
+  background: rgba(8, 12, 24, 0.98);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  flex-direction: column;
+}
+
+nav#principal:focus-within ul,
+nav#principal ul.open {
+  display: flex;
+}
+
+nav#principal ul li a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  transition: background 0.2s, color 0.2s;
+}
+
+nav#principal ul li a:hover {
+  background: var(--color-border);
+  color: var(--color-text);
 }
