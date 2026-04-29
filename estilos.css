@@ -17,3 +17,11 @@ img {
 html {
   scroll-behavior: smooth;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b38cff;
+}
