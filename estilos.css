@@ -6,22 +6,62 @@ body {
   color: rgb(255, 249, 240);
 }
 
-img {
-  border-radius: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
-.logo {
-  border: 2px solid black;
+/* header */
+body>header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: var(--header-h);
+  padding: 0 1.25rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-a {
-  color: white;
-  text-decoration: none;
+body>header>#logo,
+body>header>#logom {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  flex-shrink: 0;
 }
 
-a:hover {
-  color: #b38cff;
+body>header>#logo img,
+body>header>#logom img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
+
+body>header>h1 {
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  margin-right: auto;
+}
+  img {
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+  .logo {
+    border: 2px solid black;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #b38cff;
+  }
