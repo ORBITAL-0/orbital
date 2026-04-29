@@ -14,9 +14,25 @@ li {
 img {
   border-radius: 10px;
 }
-#programamarte, #ungransalto, #vanguardia {
-  background-color: lightblue;
-}
+
 .logo {
   border: 2px solid black;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 0%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 30%);
 }
