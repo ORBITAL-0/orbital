@@ -250,14 +250,15 @@ main>section:first-of-type {
   object-position: center;
   opacity: 0.85;
 }
+
 #despeguei::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-          rgba(0, 0, 0, 0.55) 0%,
-          rgba(0, 0, 0, 0.2) 40%,
-          rgba(0, 0, 0, 0.85) 100%);
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.2) 40%,
+      rgba(0, 0, 0, 0.85) 100%);
 }
 
 main>section:first-of-type h4 {
@@ -272,6 +273,7 @@ main>section:first-of-type p {
   max-width: 520px;
   color: var(--color-text-soft);
 }
+
 main>section:first-of-type::after {
   content: "";
   position: absolute;
@@ -290,10 +292,108 @@ main>section:first-of-type::after {
 
   0%,
   100% {
-      transform: translateX(-50%) rotate(45deg) translateY(0);
+    transform: translateX(-50%) rotate(45deg) translateY(0);
   }
 
   50% {
-      transform: translateX(-50%) rotate(45deg) translateY(8px);
+    transform: translateX(-50%) rotate(45deg) translateY(8px);
   }
+}
+
+/* sección 2*/
+main>section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+/* estadísticas*/
+main>section:nth-of-type(2)>ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem 1rem;
+  padding: 4rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main>section:nth-of-type(2)>ul li {
+  flex: 1 1 calc(50% - 1rem);
+  /* 2 columnas en mobile */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 120px;
+}
+
+main>section:nth-of-type(2)>ul li h4 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+main>section:nth-of-type(2)>ul li a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  cursor: default;
+}
+
+/*misión destacada*/
+main>section:nth-of-type(2)>section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 3rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+}
+
+#astronautai {
+  flex: 1 1 50%;
+}
+
+#astronautai img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+main>section:nth-of-type(2)>section:nth-of-type(1) article {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main>section:nth-of-type(2)>section:nth-of-type(1) article h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+
+main>section:nth-of-type(2)>section:nth-of-type(1) article a {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 0.4rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+main>section:nth-of-type(2)>section:nth-of-type(1) article a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
