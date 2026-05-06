@@ -143,21 +143,6 @@
         </iframe>
         </section>
     </footer>
-    <script>
-  const navBtn = document.querySelector('nav#principal button');
-  const navUl = document.querySelector('nav#principal ul');
-
-  navBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Evita que el clic se propague
-    navUl.classList.toggle('open');
-  });
-
-  // Cerrar el menú si se hace clic fuera de él
-  document.addEventListener('click', () => {
-    navUl.classList.remove('open');
-  });
-</script>
-
 </body>
 
 </html>
