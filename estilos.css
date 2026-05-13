@@ -746,7 +746,7 @@ footer iframe {
 .pag-misiones main > section > article figure {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
@@ -801,15 +801,15 @@ footer iframe {
 }
 
 .pag-misiones main > section > article h3 {
-  font-size: 1.4rem;
-  padding: 1.5rem 1.5rem 0;
+  font-size: 1.6rem;
+  padding: 1.75rem 1.5rem 0;
   margin-bottom: 0.5rem;
 }
 
 .pag-misiones main > section > article p {
   padding: 0 1.5rem;
   color: var(--color-text-soft);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -825,7 +825,7 @@ footer iframe {
   padding-bottom: 1.75rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .pag-misiones main > section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -833,6 +833,7 @@ footer iframe {
   }
 }
 
+/* DESKTOP: a partir de 1100px, 3 columnas */
 @media (min-width: 1100px) {
   .pag-misiones main > section {
     grid-template-columns: repeat(3, 1fr);
