@@ -397,6 +397,58 @@ main>section:nth-of-type(2)>section:nth-of-type(1) article a:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
+/* vanguardia */
+#vanguardia {
+  padding: 3rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#vanguardia h4 {
+  margin-bottom: 0;
+}
+
+#vanguardia h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+
+#vanguardia ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#vanguardia ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+#vanguardia > a {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 0.4rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#vanguardia > a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 /* tierra */
 #ungransalto {
   padding: 3rem 1.25rem;
