@@ -486,7 +486,7 @@ main > p {
 }
 
 #misiont {
-  margin: 0 1.25rem 2.5rem;
+  margin: 0 1.25rem 1.5rem;
 }
 
 #misiont img {
@@ -500,9 +500,9 @@ main > h3 {
 }
 
 .cards-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   padding: 0 1.25rem 4rem;
 }
 
@@ -511,38 +511,33 @@ main > h3 {
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .card-tech .icono {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1;
 }
 
 .card-tech h4 {
   font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-accent);
   padding: 0;
 }
 
 .card-tech p {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   line-height: 1.6;
   color: var(--color-text-soft);
   padding: 0;
   max-width: none;
-}
-@media (min-width: 480px) {
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 }
 /* FOOTER */
 footer {
