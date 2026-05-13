@@ -827,15 +827,19 @@ footer iframe {
 
 @media (min-width: 900px) {
   .pag-misiones main > section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.5rem;
+  }
+
+  .pag-misiones main > section > article {
+    flex: 1 1 calc(50% - 0.75rem);
   }
 }
 
-/* DESKTOP: a partir de 1100px, 3 columnas */
+/* DESKTOP: a partir de 1100px, 3 columnas con flex */
 @media (min-width: 1100px) {
-  .pag-misiones main > section {
-    grid-template-columns: repeat(3, 1fr);
+  .pag-misiones main > section > article {
+    flex: 1 1 calc(33.333% - 1rem);
   }
 }
