@@ -499,7 +499,7 @@ main > h4 {
 }
 
 main > h2 {
-  font-size: clamp(2.2rem, 12vw, 4.5rem);
+  font-size: clamp(1.9rem, 10vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 1.2rem;
   max-width: 520px;
@@ -526,7 +526,7 @@ main > p {
 
 /* título sobre imagen */
 main > h3 {
-  font-size: clamp(1.8rem, 8vw, 3rem);
+  font-size: clamp(1.4rem, 6vw, 2.4rem);
   line-height: 1.05;
   text-align: center;
   margin-top: -7.5rem;
