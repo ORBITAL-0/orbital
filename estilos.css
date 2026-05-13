@@ -472,71 +472,169 @@ main>section:nth-of-type(2)>section:nth-of-type(1) article a:hover {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.1;
 }
-/* TECNOLOGÍA */
+/* TECNOLOGÍA - MOBILE FIRST */
+
+main {
+  padding-top: var(--header-h);
+}
+
+/* ancho general de la página tecnología */
+main > h4,
+main > h2,
+main > p,
+main > h3,
+#misiont,
+.cards-grid {
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* texto superior */
 main > h4 {
-  padding: 3rem 1.25rem 1rem;
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
 }
 
 main > h2 {
-  padding: 0 1.25rem 1rem;
+  font-size: clamp(2.2rem, 12vw, 4.5rem);
+  line-height: 0.95;
+  margin-bottom: 1.2rem;
+  max-width: 520px;
 }
 
 main > p {
-  padding: 0 1.25rem 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2.2rem;
 }
 
+/* imagen */
 #misiont {
-  margin: 0 1.25rem 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 #misiont img {
   width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius);
 }
 
+/* título sobre imagen */
 main > h3 {
-  padding: 0 1.25rem 1.5rem;
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  line-height: 1.05;
+  text-align: center;
+  margin-top: -7.5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
 }
 
+/* cards */
 .cards-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 0 1.25rem 4rem;
+  gap: 1.8rem;
+  padding-bottom: 4.5rem;
 }
 
 .card-tech {
-  margin: 0;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 2rem;
+  background: #05070d;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 14px;
+  padding: 2.2rem 1.9rem;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 .card-tech .icono {
-  font-size: 2.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
   line-height: 1;
 }
 
 .card-tech h4 {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: none;
   color: var(--color-text);
-  padding: 0;
 }
 
 .card-tech p {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text-soft);
-  padding: 0;
-  max-width: none;
+}
+
+/* TABLET / COMPU */
+@media (min-width: 768px) {
+  main > h4,
+  main > h2,
+  main > p {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  main > h2 {
+    max-width: 800px;
+  }
+
+  main > p {
+    max-width: 620px;
+    margin-left: calc((100% - min(100% - 4rem, 1200px)) / 2);
+    margin-right: auto;
+  }
+
+  #misiont {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  #misiont img {
+    aspect-ratio: 16 / 7;
+  }
+
+  main > h3 {
+    margin-top: -6rem;
+    margin-bottom: 5rem;
+  }
+
+  .cards-grid {
+    width: min(100% - 4rem, 1200px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* DESKTOP GRANDE */
+@media (min-width: 1100px) {
+  main > h4 {
+    padding-top: 5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-tech {
+    min-height: 300px;
+    padding: 2.4rem;
+  }
 }
 /* FOOTER */
 footer {
