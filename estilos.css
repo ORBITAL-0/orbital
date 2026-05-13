@@ -479,33 +479,33 @@ main {
 }
 
 /* ancho general de la página tecnología */
-main > h4,
-main > h2,
-main > p,
-main > h3,
-#misiont,
-.cards-grid {
+.pag-tecnologia main > h4,
+.pag-tecnologia main > h2,
+.pag-tecnologia main > p,
+.pag-tecnologia main > h3,
+.pag-tecnologia #misiont,
+.pag-tecnologia .cards-grid {
   width: min(100% - 2.5rem, 1200px);
   margin-left: auto;
   margin-right: auto;
 }
 
 /* texto superior */
-main > h4 {
+.pag-tecnologia main > h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
 }
 
-main > h2 {
+.pag-tecnologia main > h2  {
   font-size: clamp(1.9rem, 10vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 1.2rem;
   max-width: 520px;
 }
 
-main > p {
+.pag-tecnologia main > p {
   font-size: 1rem;
   line-height: 1.8;
   max-width: 480px;
@@ -513,11 +513,11 @@ main > p {
 }
 
 /* imagen */
-#misiont {
+.pag-tecnologia #misiont {
   margin-bottom: 1.8rem;
 }
 
-#misiont img {
+.pag-tecnologia #misiont img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -525,7 +525,7 @@ main > p {
 }
 
 /* título sobre imagen */
-main > h3 {
+.pag-tecnologia main > h3 {
   font-size: clamp(1.4rem, 6vw, 2.4rem);
   line-height: 1.05;
   text-align: center;
@@ -536,14 +536,14 @@ main > h3 {
 }
 
 /* cards */
-.cards-grid {
+.pag-tecnologia cards-grid {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
   padding-bottom: 4.5rem;
 }
 
-.card-tech {
+.pag-tecnologia card-tech {
   background: #05070d;
   border: 1px solid rgba(59, 130, 246, 0.12);
   border-radius: 14px;
@@ -554,7 +554,7 @@ main > h3 {
   gap: 1rem;
 }
 
-.card-tech .icono {
+.pag-tecnologia card-tech .icono {
   width: 48px;
   height: 48px;
   border-radius: 10px;
@@ -567,7 +567,7 @@ main > h3 {
   line-height: 1;
 }
 
-.card-tech h4 {
+.pag-tecnologia card-tech h4 {
   font-size: 1.35rem;
   line-height: 1.25;
   font-weight: 800;
@@ -576,7 +576,7 @@ main > h3 {
   color: var(--color-text);
 }
 
-.card-tech p {
+.pag-tecnologia card-tech p {
   font-size: 1rem;
   line-height: 1.75;
   color: var(--color-text-soft);
@@ -584,36 +584,36 @@ main > h3 {
 
 /* TABLET / COMPU */
 @media (min-width: 768px) {
-  main > h4,
-  main > h2,
-  main > p {
+  .pag-tecnologia main > h4,
+  .pag-tecnologia main > h2,
+  .pag-tecnologia main > p {
     width: min(100% - 4rem, 1200px);
   }
 
-  main > h2 {
+ .pag-tecnologia main > h2 {
     max-width: 800px;
   }
 
-  main > p {
+  .pag-tecnologia main > p {
     max-width: 620px;
     margin-left: calc((100% - min(100% - 4rem, 1200px)) / 2);
     margin-right: auto;
   }
 
-  #misiont {
+  .pag-tecnologia #misiont {
     width: min(100% - 4rem, 1200px);
   }
 
-  #misiont img {
+ .pag-tecnologia #misiont img {
     aspect-ratio: 16 / 7;
   }
 
-  main > h3 {
+  .pag-tecnologia main > h3 {
     margin-top: -6rem;
     margin-bottom: 5rem;
   }
 
-  .cards-grid {
+ .pag-tecnologia cards-grid {
     width: min(100% - 4rem, 1200px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -623,15 +623,15 @@ main > h3 {
 
 /* DESKTOP GRANDE */
 @media (min-width: 1100px) {
-  main > h4 {
+ .pag-tecnologia main > h4 {
     padding-top: 5rem;
   }
 
-  .cards-grid {
+  .pag-tecnologia cards-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .card-tech {
+  .pag-tecnologia card-tech {
     min-height: 300px;
     padding: 2.4rem;
   }
@@ -691,4 +691,153 @@ footer iframe {
   width: 100%;
   height: 220px;
   border-radius: var(--radius);
+}
+/*PÁGINA MISIONES */
+
+.pag-misiones main > h4 {
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag-misiones main > h2 {
+  font-size: clamp(2.2rem, 10vw, 4rem);
+  line-height: 0.95;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag-misiones main > p {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  padding: 0 1.25rem;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.pag-misiones main > section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: min(100% - 2.5rem, 1200px);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.pag-misiones main > section > article {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.pag-misiones main > section > article:hover {
+  border-color: var(--color-border-strong);
+  transform: translateY(-4px);
+}
+
+.pag-misiones main > section > article figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.pag-misiones main > section > article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pag-misiones main > section > article figure figcaption {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.pag-misiones main > section > article figure figcaption::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-green);
+}
+
+.pag-misiones main > section > article figure figcaption.proximamente::before {
+  background: var(--status-yellow);
+}
+
+.pag-misiones main > section > article figure figcaption.en-desarrollo::before {
+  background: var(--status-blue);
+}
+
+.pag-misiones main > section > article figure figcaption.planificacion::before {
+  background: var(--status-purple);
+}
+
+.pag-misiones main > section > article figure figcaption.completada::before {
+  background: var(--status-green);
+}
+
+.pag-misiones main > section > article h3 {
+  font-size: 1.4rem;
+  padding: 1.5rem 1.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.pag-misiones main > section > article p {
+  padding: 0 1.5rem;
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pag-misiones main > section > article h3 + p {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.pag-misiones main > section > article p:last-child {
+  padding-bottom: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .pag-misiones main > section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .pag-misiones main > section {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
