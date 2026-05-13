@@ -529,29 +529,16 @@ footer iframe {
   border-radius: var(--radius);
 }
 /* tecnología */
+/* tecnología cards */
 main section {
   padding: 1.5rem;
-  margin: 0 1.25rem;
+  margin: 1.25rem 1.25rem 0 1.25rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-main section + section {
-  margin-top: 1.25rem;
-}
-
-.icono {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: rgba(59, 130, 246, 0.15);
-  border-radius: 10px;
-  font-size: 1.4rem;
+  text-align: left;
 }
 
 main section h4 {
@@ -560,4 +547,26 @@ main section h4 {
   text-transform: none;
   color: var(--color-text);
   font-weight: 700;
+}
+main > h4,
+main > h2,
+main > p {
+  padding: 0 1.25rem;
+}
+
+main > h4 {
+  padding-top: 2rem;
+}
+
+#misiont {
+  margin: 2rem 1.25rem 0;
+}
+
+#misiont img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+main > h3 {
+  padding: 1.5rem 1.25rem 0;
 }
