@@ -474,8 +474,7 @@ main>section:nth-of-type(2)>section:nth-of-type(1) article a:hover {
 }
 /* TECNOLOGÍA */
 main > h4 {
-  padding: 2rem 1.25rem 0.5rem;
-  margin-top: var(--header-h);
+  padding: 4rem 1.25rem 1rem;
 }
 
 main > h2 {
@@ -483,11 +482,12 @@ main > h2 {
 }
 
 main > p {
-  padding: 0 1.25rem 1.5rem;
+  padding: 0 1.25rem 2rem;
+  max-width: 520px;
 }
 
 #misiont {
-  margin: 0 1.25rem 2rem;
+  margin: 0 1.25rem 2.5rem;
 }
 
 #misiont img {
@@ -498,20 +498,43 @@ main > p {
 }
 
 main > h3 {
-  padding: 0 1.25rem 1.5rem;
+  padding: 0 1.25rem 2rem;
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 0 1.25rem 3rem;
+  gap: 1.25rem;
+  padding: 0 1.25rem 4rem;
 }
 
 .card-tech {
   margin: 0;
   background: var(--color-card);
-  text-align: left;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-tech .icono {
+  font-size: 1.75rem;
+}
+
+.card-tech h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;          /* cancela el letter-spacing del h4 global */
+  text-transform: none;       /* cancela el uppercase del h4 global */
+  color: var(--color-text);
+  padding: 0;                 /* cancela el padding que pusimos arriba */
+}
+
+.card-tech p {
+  padding: 0;
+  max-width: none;
 }
 
 @media (min-width: 640px) {
@@ -523,9 +546,11 @@ main > h3 {
 @media (min-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
   }
 }
-
 /* FOOTER */
 footer {
   display: flex;
