@@ -425,3 +425,437 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   text-transform: uppercase;
   line-height: 1.15;
 }
+
+/* vanguardia */
+#vanguardia {
+  padding: 3rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#vanguardia h4 {
+  margin-bottom: 0;
+}
+
+#vanguardia h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+
+#vanguardia ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#vanguardia ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+#vanguardia>a {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 0.4rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#vanguardia>a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* tierra */
+#ungransalto {
+  padding: 3rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#tierrai img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+#ungransalto h3 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+/* TECNOLOGÍA - MOBILE FIRST */
+
+/* PÁGINA TECNOLOGÍA - MOBILE FIRST */
+
+.pag-tecnologia main {
+  padding-top: var(--header-h);
+}
+
+.pag-tecnologia main > h4,
+.pag-tecnologia main > h2,
+.pag-tecnologia main > p,
+.pag-tecnologia main > h3,
+.pag-tecnologia #misiont,
+.pag-tecnologia .cards-grid {
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag-tecnologia main > h4 {
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+}
+
+.pag-tecnologia main > h2 {
+  font-size: clamp(1.9rem, 10vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 1.2rem;
+  max-width: 520px;
+}
+
+.pag-tecnologia main > p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2.2rem;
+}
+
+.pag-tecnologia #misiont {
+  margin-bottom: 1.8rem;
+}
+
+.pag-tecnologia #misiont img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.pag-tecnologia main > h3 {
+  font-size: clamp(1.4rem, 6vw, 2.4rem);
+  line-height: 1.05;
+  text-align: center;
+  margin-top: -7.5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+  color: var(--color-text);
+}
+
+.pag-tecnologia .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-bottom: 4.5rem;
+}
+
+.pag-tecnologia .card-tech {
+  background: #05070d;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 14px;
+  padding: 2.2rem 1.9rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pag-tecnologia .card-tech .icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.pag-tecnologia .card-tech h4 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text);
+}
+
+.pag-tecnologia .card-tech p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-soft);
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .pag-tecnologia main > h4,
+  .pag-tecnologia main > h2,
+  .pag-tecnologia main > p {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  .pag-tecnologia main > h2 {
+    max-width: 800px;
+  }
+
+  .pag-tecnologia main > p {
+    max-width: 620px;
+  }
+
+  .pag-tecnologia #misiont {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  .pag-tecnologia #misiont img {
+    aspect-ratio: 16 / 7;
+  }
+
+  .pag-tecnologia main > h3 {
+    margin-top: -6rem;
+    margin-bottom: 5rem;
+  }
+
+  .pag-tecnologia .cards-grid {
+    width: min(100% - 4rem, 1200px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1100px) {
+  .pag-tecnologia main > h4 {
+    padding-top: 5rem;
+  }
+
+  .pag-tecnologia .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pag-tecnologia .card-tech {
+    min-height: 300px;
+    padding: 2.4rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 4rem 1.25rem;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border);
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+footer #logo1 img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+footer h3 {
+  font-size: 1.1rem;
+}
+
+footer nav#final ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer nav#final ul li a {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  transition: color 0.2s;
+}
+
+footer nav#final ul li a:hover {
+  color: var(--color-text);
+}
+
+footer address p {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+footer iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius);
+}
+/*PÁGINA MISIONES */
+
+.pag-misiones main > h4 {
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag-misiones main > h2 {
+  font-size: clamp(2.2rem, 10vw, 4rem);
+  line-height: 0.95;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag-misiones main > p {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  padding: 0 1.25rem;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.pag-misiones main > section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: min(100% - 2.5rem, 1200px);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.pag-misiones main > section > article {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.pag-misiones main > section > article:hover {
+  border-color: var(--color-border-strong);
+  transform: translateY(-4px);
+}
+
+.pag-misiones main > section > article figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.pag-misiones main > section > article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pag-misiones main > section > article figure figcaption {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.pag-misiones main > section > article figure figcaption::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-green);
+}
+
+.pag-misiones main > section > article figure figcaption.proximamente::before {
+  background: var(--status-yellow);
+}
+
+.pag-misiones main > section > article figure figcaption.en-desarrollo::before {
+  background: var(--status-blue);
+}
+
+.pag-misiones main > section > article figure figcaption.planificacion::before {
+  background: var(--status-purple);
+}
+
+.pag-misiones main > section > article figure figcaption.completada::before {
+  background: var(--status-green);
+}
+
+.pag-misiones main > section > article h3 {
+  font-size: 1.5rem;
+  padding: 1.5rem 1.25rem 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.pag-misiones main > section > article h3 small {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.pag-misiones main > section > article p {
+  padding: 0 1.25rem;
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.pag-misiones main > section > article p:last-child {
+  padding-bottom: 1.75rem;
+}
