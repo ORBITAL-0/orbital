@@ -415,9 +415,9 @@ main>section:nth-of-type(2)>section:nth-of-type(2) {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-          rgba(0, 0, 0, 0.6) 0%,
-          rgba(0, 0, 0, 0.2) 50%,
-          rgba(0, 0, 0, 0.6) 100%);
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
@@ -481,25 +481,18 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
 /* tierra */
 #ungransalto {
   padding: 3rem 1.25rem;
-  max-width: var(--container);
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-#tierrai img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius);
 }
 
 #ungransalto h3 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.1;
 }
+
 /* TECNOLOGÍA - MOBILE FIRST */
 
 /* PÁGINA TECNOLOGÍA - MOBILE FIRST */
@@ -508,10 +501,10 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   padding-top: var(--header-h);
 }
 
-.pag-tecnologia main > h4,
-.pag-tecnologia main > h2,
-.pag-tecnologia main > p,
-.pag-tecnologia main > h3,
+.pag-tecnologia main>h4,
+.pag-tecnologia main>h2,
+.pag-tecnologia main>p,
+.pag-tecnologia main>h3,
 .pag-tecnologia #misiont,
 .pag-tecnologia .cards-grid {
   width: min(100% - 2.5rem, 1200px);
@@ -519,21 +512,21 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   margin-right: auto;
 }
 
-.pag-tecnologia main > h4 {
+.pag-tecnologia main>h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
 }
 
-.pag-tecnologia main > h2 {
+.pag-tecnologia main>h2 {
   font-size: clamp(1.9rem, 10vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 1.2rem;
   max-width: 520px;
 }
 
-.pag-tecnologia main > p {
+.pag-tecnologia main>p {
   font-size: 1rem;
   line-height: 1.8;
   max-width: 480px;
@@ -551,7 +544,7 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   border-radius: var(--radius);
 }
 
-.pag-tecnologia main > h3 {
+.pag-tecnologia main>h3 {
   font-size: clamp(1.4rem, 6vw, 2.4rem);
   line-height: 1.05;
   text-align: center;
@@ -610,17 +603,18 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
 
 /* TABLET */
 @media (min-width: 768px) {
-  .pag-tecnologia main > h4,
-  .pag-tecnologia main > h2,
-  .pag-tecnologia main > p {
+
+  .pag-tecnologia main>h4,
+  .pag-tecnologia main>h2,
+  .pag-tecnologia main>p {
     width: min(100% - 4rem, 1200px);
   }
 
-  .pag-tecnologia main > h2 {
+  .pag-tecnologia main>h2 {
     max-width: 800px;
   }
 
-  .pag-tecnologia main > p {
+  .pag-tecnologia main>p {
     max-width: 620px;
   }
 
@@ -632,7 +626,7 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
     aspect-ratio: 16 / 7;
   }
 
-  .pag-tecnologia main > h3 {
+  .pag-tecnologia main>h3 {
     margin-top: -6rem;
     margin-bottom: 5rem;
   }
@@ -647,7 +641,7 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
 
 /* DESKTOP */
 @media (min-width: 1100px) {
-  .pag-tecnologia main > h4 {
+  .pag-tecnologia main>h4 {
     padding-top: 5rem;
   }
 
@@ -717,9 +711,10 @@ footer iframe {
   height: 220px;
   border-radius: var(--radius);
 }
+
 /*PÁGINA MISIONES */
 
-.pag-misiones main > h4 {
+.pag-misiones main>h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
   text-align: center;
@@ -728,7 +723,7 @@ footer iframe {
   margin-right: auto;
 }
 
-.pag-misiones main > h2 {
+.pag-misiones main>h2 {
   font-size: clamp(2.2rem, 10vw, 4rem);
   line-height: 0.95;
   text-align: center;
@@ -738,7 +733,7 @@ footer iframe {
   margin-right: auto;
 }
 
-.pag-misiones main > p {
+.pag-misiones main>p {
   text-align: center;
   max-width: 520px;
   margin: 0 auto 3rem;
@@ -747,7 +742,7 @@ footer iframe {
   line-height: 1.7;
 }
 
-.pag-misiones main > section {
+.pag-misiones main>section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -756,7 +751,7 @@ footer iframe {
   padding-bottom: 4rem;
 }
 
-.pag-misiones main > section > article {
+.pag-misiones main>section>article {
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -766,25 +761,25 @@ footer iframe {
   transition: border-color 0.3s, transform 0.3s;
 }
 
-.pag-misiones main > section > article:hover {
+.pag-misiones main>section>article:hover {
   border-color: var(--color-border-strong);
   transform: translateY(-4px);
 }
 
-.pag-misiones main > section > article figure {
+.pag-misiones main>section>article figure {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
-.pag-misiones main > section > article figure img {
+.pag-misiones main>section>article figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.pag-misiones main > section > article figure figcaption {
+.pag-misiones main>section>article figure figcaption {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -804,7 +799,7 @@ footer iframe {
   color: var(--color-text);
 }
 
-.pag-misiones main > section > article figure figcaption::before {
+.pag-misiones main>section>article figure figcaption::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -812,23 +807,23 @@ footer iframe {
   background: var(--status-green);
 }
 
-.pag-misiones main > section > article figure figcaption.proximamente::before {
+.pag-misiones main>section>article figure figcaption.proximamente::before {
   background: var(--status-yellow);
 }
 
-.pag-misiones main > section > article figure figcaption.en-desarrollo::before {
+.pag-misiones main>section>article figure figcaption.en-desarrollo::before {
   background: var(--status-blue);
 }
 
-.pag-misiones main > section > article figure figcaption.planificacion::before {
+.pag-misiones main>section>article figure figcaption.planificacion::before {
   background: var(--status-purple);
 }
 
-.pag-misiones main > section > article figure figcaption.completada::before {
+.pag-misiones main>section>article figure figcaption.completada::before {
   background: var(--status-green);
 }
 
-.pag-misiones main > section > article h3 {
+.pag-misiones main>section>article h3 {
   font-size: 1.5rem;
   padding: 1.5rem 1.25rem 0;
   margin-bottom: 0.75rem;
@@ -839,7 +834,7 @@ footer iframe {
   text-align: left;
 }
 
-.pag-misiones main > section > article h3 small {
+.pag-misiones main>section>article h3 small {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -848,7 +843,7 @@ footer iframe {
   flex-shrink: 0;
 }
 
-.pag-misiones main > section > article p {
+.pag-misiones main>section>article p {
   padding: 0 1.25rem;
   color: var(--color-text-soft);
   font-size: 0.95rem;
@@ -856,6 +851,344 @@ footer iframe {
   text-align: left;
 }
 
-.pag-misiones main > section > article p:last-child {
+.pag-misiones main>section>article p:last-child {
   padding-bottom: 1.75rem;
+}
+
+/* ==========================================
+   POTENCIACIÓN
+   ========================================== */
+
+/* texto de acento — blanco */
+.text-accent {
+  color: var(--color-text);
+}
+
+/* logon en header (nosotros) — mismo estilo que #logo */
+body>header>#logon {
+  display: flex;
+  align-items: center;
+  flex: 0 0 32px;
+}
+
+body>header>#logon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* starfield CSS puro — fondo fijo con estrellas via radial-gradients */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1px 1px at 18% 45%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 27% 8%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 70%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(1px 1px at 44% 30%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(2px 2px at 52% 55%, rgba(255, 255, 255, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 68% 85%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 10%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1px 1px at 82% 42%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(2px 2px at 88% 65%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 25%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 12% 75%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 22% 90%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 38% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 78%, rgba(255, 255, 255, 0.38) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 60%, rgba(255, 255, 255, 0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 90%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(1px 1px at 3% 55%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 48% 95%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
+    radial-gradient(1px 1px at 63% 5%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
+    radial-gradient(1px 1px at 78% 32%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(2px 2px at 92% 48%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(1px 1px at 16% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 33% 25%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 40%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 78%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 88%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
+    radial-gradient(1px 1px at 72% 48%, rgba(255, 255, 255, 0.38) 0%, transparent 100%);
+}
+
+/* flecha de scroll animada */
+@keyframes scroll-bounce {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) rotate(45deg) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(45deg) translateY(6px);
+  }
+}
+
+/* flecha de scroll — eliminada */
+.pag-inicio main>section:first-of-type::after {
+  display: none;
+}
+
+/* suprimir flecha en misiones */
+.pag-misiones main>section:first-of-type::after {
+  display: none;
+}
+
+/* números de estadísticas — color base */
+main>section:nth-of-type(2)>ul li h4 {
+  color: var(--color-text);
+}
+
+/* cards de vanguardia — borde accent + glow en hover */
+#vanguardia ul li {
+  border-left: 2px solid var(--color-accent);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+#vanguardia ul li:hover {
+  background: var(--color-card-hover);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.14), inset 0 0 0 1px rgba(59, 130, 246, 0.18);
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (min-width: 768px) {
+
+  /* estadísticas en fila de 4 */
+  main>section:nth-of-type(2)>ul li {
+    flex: 1 1 calc(25% - 1rem);
+  }
+
+  /* misión destacada — imagen + texto lado a lado */
+  #programamarte {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* vanguardia — 2 columnas */
+  #vanguardia ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #vanguardia ul li {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+
+  /* misiones — 2 columnas */
+  .pag-misiones main>section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .pag-misiones main>section>article {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  /* footer — 3 columnas */
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  footer>section:first-child {
+    flex: 2;
+    min-width: 200px;
+  }
+
+  footer>section:nth-child(2),
+  footer>section:nth-child(3) {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  footer>iframe {
+    flex: 1 1 100%;
+    height: 240px;
+  }
+}
+
+@media (min-width: 1100px) {
+
+  /* misiones — 3 columnas */
+  .pag-misiones main>section>article {
+    flex: 1 1 calc(33.333% - 1.5rem);
+  }
+
+  /* footer — fila completa con separador */
+  footer {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  footer>section:first-child {
+    flex: 2;
+    border-right: 1px solid var(--color-border);
+    padding-right: 3rem;
+  }
+
+  footer>section:nth-child(2),
+  footer>section:nth-child(3) {
+    flex: 1;
+  }
+
+  footer>iframe {
+    flex: 1.5;
+    height: 220px;
+  }
+}
+
+/* ==========================================
+   TECNOLOGÍA — textos centrados
+   ========================================== */
+
+.pag-tecnologia main>h4,
+.pag-tecnologia main>h2,
+.pag-tecnologia main>p,
+.pag-tecnologia main>h3 {
+  text-align: center;
+}
+
+/* "Diseñado para lo imposible" más arriba sobre la imagen */
+.pag-tecnologia main>h3 {
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .pag-tecnologia main>h3 {
+    margin-top: -12rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .pag-tecnologia main>h3 {
+    margin-top: -16rem;
+  }
+}
+
+/* ==========================================
+   CAROUSEL — vanguardia
+   ========================================== */
+
+/* cancelar multi-columna del responsive */
+#vanguardia ul {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* ocultar todos los items */
+#vanguardia ul li {
+  display: none;
+}
+
+/* mostrar solo el activo */
+#vanguardia ul li.carousel-active {
+  display: flex;
+  width: 100%;
+}
+
+/* controles del carousel */
+#vanguardia-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+#vanguardia-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+#vanguardia-nav button:hover {
+  background: var(--color-card-hover);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+#vanguardia-counter {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  min-width: 3rem;
+  text-align: center;
+}
+
+/* vanguardia — link y nav en la misma fila */
+#vanguardia {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#vanguardia>h4,
+#vanguardia>h2,
+#vanguardia>ul {
+  flex: 0 0 100%;
+}
+
+#vanguardia>a {
+  order: 3;
+  flex: 0 0 auto;
+  margin-right: auto;
+  margin-top: 0;
+  align-self: center;
+}
+
+#vanguardia-nav {
+  order: 4;
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+/* footer — headings alineados: padding-top compensa el logo en col 1 */
+@media (min-width: 768px) {
+  footer>section:nth-child(2),
+  footer>section:nth-child(3) {
+    padding-top: calc(32px + 0.75rem);
+  }
+}
+
+/* nav desktop — barra horizontal, sin hamburgesa */
+@media (min-width: 768px) {
+  nav#principal button {
+    display: none;
+  }
+
+  nav#principal ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: unset;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    gap: 0.25rem;
+  }
 }
