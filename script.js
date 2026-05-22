@@ -1,5 +1,13 @@
 // El script está al final del body — DOM ya está disponible al ejecutarse
 
+// ── Nav — marcar link activo según página actual ─────────────────────────
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('nav#principal ul li a').forEach(link => {
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+  }
+});
+
 // ── Counter animado al hacer scroll ──────────────────────────────────────
 const statsUl = document.querySelector('main>section:nth-of-type(2)>ul');
 if (statsUl) {

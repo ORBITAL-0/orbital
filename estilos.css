@@ -859,9 +859,9 @@ footer iframe {
    POTENCIACIÓN
    ========================================== */
 
-/* texto de acento — blanco */
+/* texto de acento — azul */
 .text-accent {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 /* logon en header (nosotros) — mismo estilo que #logo */
@@ -929,9 +929,10 @@ body::before {
   }
 }
 
-/* flecha de scroll — eliminada */
+/* flecha de scroll — restaurada con animación */
 .pag-inicio main>section:first-of-type::after {
-  display: none;
+  display: block;
+  animation: scroll-bounce 1.8s ease-in-out infinite;
 }
 
 /* suprimir flecha en misiones */
@@ -1190,5 +1191,87 @@ main>section:nth-of-type(2)>ul li h4 {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     gap: 0.25rem;
+  }
+
+  /* link activo — subrayado blanco */
+  nav#principal ul li a.active {
+    color: var(--color-text);
+    position: relative;
+  }
+
+  nav#principal ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0.9rem;
+    right: 0.9rem;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+  }
+}
+
+/* ==========================================
+   DISEÑO REFERENCIA — vanguardia sin carousel
+   ========================================== */
+
+/* segunda línea del h3 en azul */
+#ungransalto h3 span {
+  color: var(--color-accent);
+}
+
+/* ocultar controles del carousel */
+#vanguardia-nav {
+  display: none;
+}
+
+/* mostrar todas las cards y numerarlas (mobile first) */
+#vanguardia ul {
+  counter-reset: tech-counter;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#vanguardia ul li {
+  display: flex;
+  counter-increment: tech-counter;
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+#vanguardia ul li.carousel-active {
+  width: auto;
+}
+
+#vanguardia ul li::before {
+  content: "0" counter(tech-counter);
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  pointer-events: none;
+}
+
+/* link centrado debajo de las cards */
+#vanguardia>a {
+  order: 3;
+  flex: 0 0 auto;
+  margin: 0.5rem auto 0;
+  align-self: center;
+}
+
+/* 3 columnas en desktop */
+@media (min-width: 900px) {
+  #vanguardia ul {
+    flex-direction: row;
+  }
+
+  #vanguardia ul li {
+    flex: 1;
   }
 }
