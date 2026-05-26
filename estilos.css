@@ -1066,12 +1066,6 @@ main>section:nth-of-type(2)>ul li h4 {
    TECNOLOGÍA — textos centrados
    ========================================== */
 
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p,
-.pag-tecnologia main>h3 {
-  text-align: center;
-}
 
 /* "Diseñado para lo imposible" más arriba sobre la imagen */
 .pag-tecnologia main>h3 {
@@ -1284,4 +1278,30 @@ main>section:nth-of-type(2)>ul li h4 {
   #vanguardia ul li {
     flex: 1;
   }
+}
+/* ARREGLO ALINEACIÓN TECNOLOGÍA */
+.pag-tecnologia main > h4,
+.pag-tecnologia main > h2,
+.pag-tecnologia main > p {
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.pag-tecnologia main > h2 {
+  max-width: 1200px;
+}
+
+.pag-tecnologia main > p {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Para que el texto no quede centrado como antes */
+.pag-tecnologia main > h4,
+.pag-tecnologia main > h2,
+.pag-tecnologia main > p {
+  text-align: left;
 }
