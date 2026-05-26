@@ -919,10 +919,13 @@ body::before {
 
 /* flecha de scroll animada */
 @keyframes scroll-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.7;
     transform: translateX(-50%) rotate(45deg) translateY(0);
   }
+
   50% {
     opacity: 1;
     transform: translateX(-50%) rotate(45deg) translateY(6px);
@@ -1167,6 +1170,7 @@ main>section:nth-of-type(2)>ul li h4 {
 
 /* footer — headings alineados: padding-top compensa el logo en col 1 */
 @media (min-width: 768px) {
+
   footer>section:nth-child(2),
   footer>section:nth-child(3) {
     padding-top: calc(32px + 0.75rem);
