@@ -40,12 +40,13 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-bg);
 }
 
 body {
   font-family: var(--font-base);
   font-weight: 400;
-  background: var(--color-bg);
+  background: transparent;
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -651,28 +652,35 @@ footer iframe {
 /* ==========================================
    PÁGINA MISIONES
    ========================================== */
-.pag-misiones main>h4 {
-  padding-top: 3.5rem;
-  margin-bottom: 0.8rem;
-  text-align: left;
+
+/* main como contenedor centrado */
+.pag-misiones main,
+.pag-tecnologia main {
+  max-width: var(--container);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
+.pag-misiones main>h4 {
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
 .pag-misiones main>h2 {
-  font-size: clamp(2.2rem, 10vw, 4rem);
+  font-size: clamp(2.5rem, 10vw, 5rem);
   line-height: 0.95;
   text-align: left;
   margin-bottom: 1.5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pag-misiones main>p {
   text-align: left;
   max-width: 520px;
   margin: 0 0 3rem;
-  padding: 0 1.25rem;
   color: var(--color-text-soft);
   line-height: 1.7;
 }
@@ -681,8 +689,6 @@ footer iframe {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: min(100% - 2.5rem, 1200px);
-  margin: 0 auto;
   padding-bottom: 4rem;
 }
 
@@ -793,18 +799,8 @@ footer iframe {
 /* ==========================================
    PÁGINA TECNOLOGÍA
    ========================================== */
-.pag-tecnologia main>h3,
-.pag-tecnologia #misiont,
-.pag-tecnologia .cards-grid {
-  width: min(100% - 2.5rem, 1200px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .pag-tecnologia main>h4 {
   padding-top: 3.5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
   margin-bottom: 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
@@ -812,26 +808,26 @@ footer iframe {
 }
 
 .pag-tecnologia main>h2 {
-  font-size: clamp(1.9rem, 10vw, 3.8rem);
+  font-size: clamp(2.5rem, 10vw, 5rem);
   line-height: 0.95;
   margin-bottom: 1.2rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  max-width: 520px;
   text-align: left;
 }
 
 .pag-tecnologia main>p {
   font-size: 1rem;
   line-height: 1.8;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  max-width: 480px;
+  max-width: 520px;
   margin-bottom: 2.2rem;
+  color: var(--color-text-soft);
   text-align: left;
 }
 
+/* imagen full-width: sale del contenedor con márgenes negativos */
 .pag-tecnologia #misiont {
+  width: calc(100% + 2.5rem);
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
   margin-bottom: 1.8rem;
 }
 
@@ -986,20 +982,27 @@ footer iframe {
     height: 240px;
   }
 
-  /* tecnología */
-  .pag-tecnologia main>h4,
-  .pag-tecnologia main>h2,
-  .pag-tecnologia main>p,
-  .pag-tecnologia #misiont {
-    width: min(100% - 4rem, 1200px);
+  /* misiones + tecnología — más padding a partir de tablet */
+  .pag-misiones main,
+  .pag-tecnologia main {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
+  /* tecnología */
   .pag-tecnologia main>h2 {
     max-width: 800px;
   }
 
   .pag-tecnologia main>p {
     max-width: 620px;
+  }
+
+  /* bleed actualizado para 2rem de padding */
+  .pag-tecnologia #misiont {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
   .pag-tecnologia #misiont img {
@@ -1011,7 +1014,6 @@ footer iframe {
   }
 
   .pag-tecnologia .cards-grid {
-    width: min(100% - 4rem, 1200px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
