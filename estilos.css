@@ -511,7 +511,12 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   margin-left: auto;
   margin-right: auto;
 }
-
+.pag-tecnologia main>h4,
+.pag-tecnologia main>h2,
+.pag-tecnologia main>p {
+  margin-left: 0;
+  text-align: left;
+}
 .pag-tecnologia main>h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
