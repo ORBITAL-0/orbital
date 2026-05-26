@@ -230,7 +230,7 @@ main>section:first-of-type {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex;
   justify-content: center;
   text-align: center;
   padding: 4rem 1.25rem 2rem;
@@ -694,7 +694,7 @@ footer iframe {
 .pag-misiones main > h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
-  text-align: center;
+  text-align: left;
   width: min(100% - 2.5rem, 1200px);
   margin-left: auto;
   margin-right: auto;
@@ -703,7 +703,7 @@ footer iframe {
 .pag-misiones main > h2 {
   font-size: clamp(2.2rem, 10vw, 4rem);
   line-height: 0.95;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1.5rem;
   width: min(100% - 2.5rem, 1200px);
   margin-left: auto;
@@ -711,9 +711,9 @@ footer iframe {
 }
 
 .pag-misiones main > p {
-  text-align: center;
+  text-align: left;
   max-width: 520px;
-  margin: 0 auto 3rem;
+  margin: 0 0 3rem;
   padding: 0 1.25rem;
   color: var(--color-text-soft);
   line-height: 1.7;
