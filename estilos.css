@@ -326,6 +326,7 @@ main>section:first-of-type h2 {
 
 main>section:first-of-type p {
   max-width: 520px;
+  margin: 0 auto;
   color: var(--color-text-soft);
 }
 
@@ -909,6 +910,41 @@ footer iframe {
    ========================================== */
 @media (min-width: 768px) {
 
+  /* nav desktop — barra horizontal */
+  nav#principal button {
+    display: none;
+  }
+
+  nav#principal ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: unset;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    gap: 0.25rem;
+  }
+
+  nav#principal ul li a.active {
+    color: var(--color-text);
+    position: relative;
+  }
+
+  nav#principal ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0.9rem;
+    right: 0.9rem;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+  }
+
   /* estadísticas en fila de 4 */
   main>section:nth-of-type(2)>ul li {
     flex: 1 1 calc(25% - 1rem);
@@ -954,195 +990,6 @@ footer iframe {
   footer>iframe {
     flex: 1 1 100%;
     height: 240px;
-  }
-}
-
-@media (min-width: 1100px) {
-
-  /* misiones — 3 columnas */
-  .pag-misiones main>section>article {
-    flex: 1 1 calc(33.333% - 1.5rem);
-  }
-
-  /* footer — fila completa con separador */
-  footer {
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    gap: 3rem;
-  }
-
-  footer>section:first-child {
-    flex: 2;
-    border-right: 1px solid var(--color-border);
-    padding-right: 3rem;
-  }
-
-  footer>section:nth-child(2),
-  footer>section:nth-child(3) {
-    flex: 1;
-  }
-
-  footer>iframe {
-    flex: 1.5;
-    height: 220px;
-  }
-}
-
-/* ==========================================
-   TECNOLOGÍA — textos centrados
-   ========================================== */
-
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p,
-.pag-tecnologia main>h3 {
-  text-align: center;
-}
-
-/* "Diseñado para lo imposible" más arriba sobre la imagen */
-.pag-tecnologia main>h3 {
-  margin-top: -10rem;
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .pag-tecnologia main>h3 {
-    margin-top: -12rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .pag-tecnologia main>h3 {
-    margin-top: -16rem;
-  }
-}
-
-/* ==========================================
-   CAROUSEL — vanguardia
-   ========================================== */
-
-/* cancelar multi-columna del responsive */
-#vanguardia ul {
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-/* ocultar todos los items */
-#vanguardia ul li {
-  display: none;
-}
-
-/* mostrar solo el activo */
-#vanguardia ul li.carousel-active {
-  display: flex;
-  width: 100%;
-}
-
-/* controles del carousel */
-#vanguardia-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-#vanguardia-nav button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-#vanguardia-nav button:hover {
-  background: var(--color-card-hover);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-#vanguardia-counter {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: var(--color-text-muted);
-  min-width: 3rem;
-  text-align: center;
-}
-
-/* vanguardia — link y nav en la misma fila */
-#vanguardia {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#vanguardia>h4,
-#vanguardia>h2,
-#vanguardia>ul {
-  flex: 0 0 100%;
-}
-
-#vanguardia>a {
-  order: 3;
-  flex: 0 0 auto;
-  margin-right: auto;
-  margin-top: 0;
-  align-self: center;
-}
-
-#vanguardia-nav {
-  order: 4;
-  flex: 0 0 auto;
-  margin-top: 0;
-}
-
-/* footer — headings alineados: padding-top compensa el logo en col 1 */
-@media (min-width: 768px) {
-
-  footer>section:nth-child(2),
-  footer>section:nth-child(3) {
-    padding-top: calc(32px + 0.75rem);
-  }
-}
-
-/* nav desktop — barra horizontal, sin hamburgesa */
-@media (min-width: 768px) {
-  nav#principal button {
-    display: none;
-  }
-
-  nav#principal ul {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    min-width: unset;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    gap: 0.25rem;
-  }
-
-  nav#principal ul li a.active {
-    color: var(--color-text);
-    position: relative;
-  }
-
-  nav#principal ul li a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: 0.9rem;
-    right: 0.9rem;
-    height: 2px;
-    background: var(--color-text);
-    border-radius: 1px;
   }
 
   /* tecnología */
