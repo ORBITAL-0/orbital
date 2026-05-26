@@ -511,17 +511,14 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   margin-left: auto;
   margin-right: auto;
 }
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p {
-  margin-left: 0;
-  text-align: left;
-}
+
 .pag-tecnologia main>h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
+  margin-left: 0;
+  text-align: left;
 }
 
 .pag-tecnologia main>h2 {
@@ -529,6 +526,8 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   line-height: 0.95;
   margin-bottom: 1.2rem;
   max-width: 520px;
+  margin-left: 0;
+  text-align: left;
 }
 
 .pag-tecnologia main>p {
@@ -536,6 +535,8 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   line-height: 1.8;
   max-width: 480px;
   margin-bottom: 2.2rem;
+  margin-left: 0;
+  text-align: left;
 }
 
 .pag-tecnologia #misiont {
