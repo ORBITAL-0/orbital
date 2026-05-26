@@ -850,7 +850,7 @@ footer iframe {
 .pag-tecnologia main>h3 {
   font-size: clamp(1.4rem, 6vw, 2.4rem);
   line-height: 1.05;
-  text-align: left;
+  text-align: center;
   margin-top: -10rem;
   margin-bottom: 4rem;
   position: relative;
