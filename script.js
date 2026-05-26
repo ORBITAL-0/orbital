@@ -36,45 +36,15 @@ function animateCounters() {
 
     const tick = setInterval(() => {
       frame++;
-      const progress = frame / totalFrames;
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = target * eased;
-
+      const eased = 1 - Math.pow(1 - frame / totalFrames, 3);
       el.textContent = suffix === 'M'
-        ? (Math.round(current * 10) / 10) + 'M'
-        : Math.floor(current).toString();
+        ? (Math.round(target * eased * 10) / 10) + 'M'
+        : Math.floor(target * eased).toString();
 
       if (frame >= totalFrames) {
         el.textContent = raw;
         clearInterval(tick);
       }
     }, frameDuration);
-  });
-}
-
-// ── Carousel de vanguardia ───────────────────────────────────────────────
-const items = document.querySelectorAll('#vanguardia ul li');
-const prevBtn = document.getElementById('vanguardia-prev');
-const nextBtn = document.getElementById('vanguardia-next');
-const counter = document.getElementById('vanguardia-counter');
-
-if (items.length && prevBtn && nextBtn) {
-  let current = 0;
-
-  function show(index) {
-    items.forEach((item, i) => item.classList.toggle('carousel-active', i === index));
-    if (counter) counter.textContent = `${index + 1} / ${items.length}`;
-  }
-
-  show(0);
-
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + items.length) % items.length;
-    show(current);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % items.length;
-    show(current);
   });
 }

@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 249, 240);
-}
-
-/* variables */
+/* ==========================================
+   VARIABLES
+   ========================================== */
 :root {
   --color-bg: #000000;
   --color-bg-soft: #050810;
@@ -20,7 +16,7 @@ body {
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-strong: rgba(255, 255, 255, 0.15);
 
-  /* Estados (misiones) */
+  /* estados misiones */
   --status-green: #22c55e;
   --status-yellow: #eab308;
   --status-blue: #3b82f6;
@@ -35,6 +31,9 @@ body {
   --header-h: 72px;
 }
 
+/* ==========================================
+   RESET
+   ========================================== */
 *,
 *::before,
 *::after {
@@ -90,7 +89,49 @@ iframe {
   border-radius: var(--radius);
 }
 
-/* tipografía */
+/* starfield CSS puro */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1px 1px at 18% 45%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 27% 8%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 70%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(1px 1px at 44% 30%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(2px 2px at 52% 55%, rgba(255, 255, 255, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 68% 85%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 10%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1px 1px at 82% 42%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(2px 2px at 88% 65%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 25%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 12% 75%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 22% 90%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 38% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 78%, rgba(255, 255, 255, 0.38) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 60%, rgba(255, 255, 255, 0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 90%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(1px 1px at 3% 55%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 48% 95%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
+    radial-gradient(1px 1px at 63% 5%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
+    radial-gradient(1px 1px at 78% 32%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
+    radial-gradient(2px 2px at 92% 48%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(1px 1px at 16% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 33% 25%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 40%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 78%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 88%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
+    radial-gradient(1px 1px at 72% 48%, rgba(255, 255, 255, 0.38) 0%, transparent 100%);
+}
+
+/* ==========================================
+   TIPOGRAFÍA
+   ========================================== */
 h1,
 h2,
 h3 {
@@ -128,7 +169,13 @@ p {
   color: var(--color-text-soft);
 }
 
-/* header */
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
 body>header {
   position: fixed;
   top: 0;
@@ -147,14 +194,16 @@ body>header {
 }
 
 body>header>#logo,
-body>header>#logom {
+body>header>#logom,
+body>header>#logon {
   display: flex;
   align-items: center;
   flex: 0 0 32px;
 }
 
 body>header>#logo img,
-body>header>#logom img {
+body>header>#logom img,
+body>header>#logon img {
   width: 32px;
   height: 32px;
   object-fit: contain;
@@ -166,7 +215,9 @@ body>header>h1 {
   margin-right: auto;
 }
 
-/* nav principal */
+/* ==========================================
+   NAV PRINCIPAL
+   ========================================== */
 nav#principal {
   position: relative;
 }
@@ -217,20 +268,24 @@ nav#principal ul li a:hover {
   color: var(--color-text);
 }
 
-/* MAIN */
+/* ==========================================
+   MAIN
+   ========================================== */
 main {
   display: flex;
   flex-direction: column;
   padding-top: var(--header-h);
 }
 
-/* index*/
+/* ==========================================
+   INDEX — HERO
+   ========================================== */
 main>section:first-of-type {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   padding: 4rem 1.25rem 2rem;
@@ -274,6 +329,7 @@ main>section:first-of-type p {
   color: var(--color-text-soft);
 }
 
+/* flecha de scroll (solo inicio) */
 main>section:first-of-type::after {
   content: "";
   position: absolute;
@@ -287,13 +343,18 @@ main>section:first-of-type::after {
   opacity: 0.7;
 }
 
-/* sección 2*/
+.pag-misiones main>section:first-of-type::after {
+  display: none;
+}
+
+/* ==========================================
+   INDEX — ESTADÍSTICAS
+   ========================================== */
 main>section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
 }
 
-/* estadísticas*/
 main>section:nth-of-type(2)>ul {
   display: flex;
   flex-wrap: wrap;
@@ -308,7 +369,6 @@ main>section:nth-of-type(2)>ul {
 
 main>section:nth-of-type(2)>ul li {
   flex: 1 1 calc(50% - 1rem);
-  /* 2 columnas en mobile */
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -332,8 +392,10 @@ main>section:nth-of-type(2)>ul li a {
   cursor: default;
 }
 
-/*misión destacada*/
-main>section:nth-of-type(2)>section:nth-of-type(1) {
+/* ==========================================
+   INDEX — MISIÓN DESTACADA
+   ========================================== */
+#programamarte {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -355,7 +417,7 @@ main>section:nth-of-type(2)>section:nth-of-type(1) {
   border-radius: var(--radius);
 }
 
-main>section:nth-of-type(2)>section:nth-of-type(1) article {
+#programamarte article {
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
@@ -363,12 +425,12 @@ main>section:nth-of-type(2)>section:nth-of-type(1) article {
   gap: 1rem;
 }
 
-main>section:nth-of-type(2)>section:nth-of-type(1) article h2 {
+#programamarte article h2 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.1;
 }
 
-main>section:nth-of-type(2)>section:nth-of-type(1) article a {
+#programamarte article a {
   margin-top: 0.5rem;
   align-self: flex-start;
   font-size: 0.75rem;
@@ -380,21 +442,26 @@ main>section:nth-of-type(2)>section:nth-of-type(1) article a {
   transition: color 0.2s, border-color 0.2s;
 }
 
-main>section:nth-of-type(2)>section:nth-of-type(1) article a:hover {
+#programamarte article a:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
 
-/*pequeño paso*/
-main>section:nth-of-type(2)>section:nth-of-type(2) {
+/* ==========================================
+   INDEX — UN GRAN SALTO
+   ========================================== */
+#ungransalto {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6rem 1.25rem;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+  width: 100%;
+  margin: 0;
   text-align: center;
   overflow: hidden;
-  margin-top: 4rem;
 }
 
 #tierrai {
@@ -420,21 +487,33 @@ main>section:nth-of-type(2)>section:nth-of-type(2) {
       rgba(0, 0, 0, 0.6) 100%);
 }
 
-main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  text-transform: uppercase;
-  line-height: 1.15;
+#ungransalto h3 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
 }
 
-/* vanguardia */
+#ungransalto h3 span {
+  color: var(--color-accent);
+}
+
+/* ==========================================
+   INDEX — VANGUARDIA
+   ========================================== */
 #vanguardia {
   padding: 3rem 1.25rem;
   max-width: var(--container);
   width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+#vanguardia>h4,
+#vanguardia>h2,
+#vanguardia>ul {
+  flex: 0 0 100%;
 }
 
 #vanguardia h4 {
@@ -449,21 +528,52 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
 #vanguardia ul {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   gap: 1.5rem;
+  counter-reset: tech-counter;
 }
 
 #vanguardia ul li {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1.5rem;
+  padding: 3.5rem 1.5rem 1.5rem;
   background: var(--color-card);
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-accent);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  counter-increment: tech-counter;
+  position: relative;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+#vanguardia ul li:hover {
+  background: var(--color-card-hover);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.14), inset 0 0 0 1px rgba(59, 130, 246, 0.18);
+  transform: translateX(4px);
+}
+
+#vanguardia ul li::before {
+  content: "0" counter(tech-counter);
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  pointer-events: none;
 }
 
 #vanguardia>a {
-  align-self: flex-start;
+  order: 3;
+  flex: 0 0 auto;
+  margin: 0.5rem auto 0;
+  align-self: center;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -478,190 +588,13 @@ main>section:nth-of-type(2)>section:nth-of-type(2) h3 {
   border-color: var(--color-accent);
 }
 
-/* tierra */
-#ungransalto {
-  padding: 3rem 1.25rem;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+#vanguardia-nav {
+  display: none;
 }
 
-#ungransalto h3 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  line-height: 1.1;
-}
-
-/* TECNOLOGÍA - MOBILE FIRST */
-
-/* PÁGINA TECNOLOGÍA - MOBILE FIRST */
-
-.pag-tecnologia main {
-  padding-top: var(--header-h);
-}
-
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p,
-.pag-tecnologia main>h3,
-.pag-tecnologia #misiont,
-.pag-tecnologia .cards-grid {
-  width: min(100% - 2.5rem, 1200px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pag-tecnologia main>h4 {
-  padding-top: 3.5rem;
-  margin-bottom: 0.8rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  margin-left: 0;
-  text-align: left;
-}
-
-.pag-tecnologia main>h2 {
-  font-size: clamp(1.9rem, 10vw, 3.8rem);
-  line-height: 0.95;
-  margin-bottom: 1.2rem;
-  max-width: 520px;
-  margin-left: 0;
-  text-align: left;
-}
-
-.pag-tecnologia main>p {
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 480px;
-  margin-bottom: 2.2rem;
-  margin-left: 0;
-  text-align: left;
-}
-
-.pag-tecnologia #misiont {
-  margin-bottom: 1.8rem;
-}
-
-.pag-tecnologia #misiont img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.pag-tecnologia main>h3 {
-  font-size: clamp(1.4rem, 6vw, 2.4rem);
-  line-height: 1.05;
-  text-align: center;
-  margin-top: -7.5rem;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 2;
-  color: var(--color-text);
-}
-
-.pag-tecnologia .cards-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  padding-bottom: 4.5rem;
-}
-
-.pag-tecnologia .card-tech {
-  background: #05070d;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 14px;
-  padding: 2.2rem 1.9rem;
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.pag-tecnologia .card-tech .icono {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: rgba(59, 130, 246, 0.18);
-  color: var(--color-accent-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.pag-tecnologia .card-tech h4 {
-  font-size: 1.35rem;
-  line-height: 1.25;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--color-text);
-}
-
-.pag-tecnologia .card-tech p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--color-text-soft);
-}
-
-/* TABLET */
-@media (min-width: 768px) {
-
-  .pag-tecnologia main>h4,
-  .pag-tecnologia main>h2,
-  .pag-tecnologia main>p {
-    width: min(100% - 4rem, 1200px);
-  }
-
-  .pag-tecnologia main>h2 {
-    max-width: 800px;
-  }
-
-  .pag-tecnologia main>p {
-    max-width: 620px;
-  }
-
-  .pag-tecnologia #misiont {
-    width: min(100% - 4rem, 1200px);
-  }
-
-  .pag-tecnologia #misiont img {
-    aspect-ratio: 16 / 7;
-  }
-
-  .pag-tecnologia main>h3 {
-    margin-top: -6rem;
-    margin-bottom: 5rem;
-  }
-
-  .pag-tecnologia .cards-grid {
-    width: min(100% - 4rem, 1200px);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-/* DESKTOP */
-@media (min-width: 1100px) {
-  .pag-tecnologia main>h4 {
-    padding-top: 5rem;
-  }
-
-  .pag-tecnologia .cards-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .pag-tecnologia .card-tech {
-    min-height: 300px;
-    padding: 2.4rem;
-  }
-}
-
-/* FOOTER */
+/* ==========================================
+   FOOTER
+   ========================================== */
 footer {
   display: flex;
   flex-direction: column;
@@ -718,8 +651,9 @@ footer iframe {
   border-radius: var(--radius);
 }
 
-/*PÁGINA MISIONES */
-
+/* ==========================================
+   PÁGINA MISIONES
+   ========================================== */
 .pag-misiones main>h4 {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
@@ -862,116 +796,117 @@ footer iframe {
 }
 
 /* ==========================================
-   POTENCIACIÓN
+   PÁGINA TECNOLOGÍA
    ========================================== */
-
-/* texto de acento — azul */
-.text-accent {
-  color: var(--color-accent);
+.pag-tecnologia main>h4,
+.pag-tecnologia main>h2,
+.pag-tecnologia main>p,
+.pag-tecnologia main>h3,
+.pag-tecnologia #misiont,
+.pag-tecnologia .cards-grid {
+  width: min(100% - 2.5rem, 1200px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* logon en header (nosotros) — mismo estilo que #logo */
-body>header>#logon {
-  display: flex;
-  align-items: center;
-  flex: 0 0 32px;
+.pag-tecnologia main>h4 {
+  padding-top: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  margin-left: 0;
+  text-align: left;
 }
 
-body>header>#logon img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.pag-tecnologia main>h2 {
+  font-size: clamp(1.9rem, 10vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 1.2rem;
+  max-width: 520px;
+  margin-left: 0;
+  text-align: left;
 }
 
-/* starfield CSS puro — fondo fijo con estrellas via radial-gradients */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image:
-    radial-gradient(1px 1px at 8% 12%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
-    radial-gradient(1px 1px at 18% 45%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 27% 8%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
-    radial-gradient(1px 1px at 35% 70%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
-    radial-gradient(1px 1px at 44% 30%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
-    radial-gradient(2px 2px at 52% 55%, rgba(255, 255, 255, 0.12) 0%, transparent 100%),
-    radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 68% 85%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
-    radial-gradient(1px 1px at 75% 10%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
-    radial-gradient(1px 1px at 82% 42%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
-    radial-gradient(2px 2px at 88% 65%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
-    radial-gradient(1px 1px at 95% 25%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
-    radial-gradient(1px 1px at 12% 75%, rgba(255, 255, 255, 0.30) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 22% 90%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
-    radial-gradient(1px 1px at 38% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 55% 78%, rgba(255, 255, 255, 0.38) 0%, transparent 100%),
-    radial-gradient(2px 2px at 70% 60%, rgba(255, 255, 255, 0.10) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 90%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
-    radial-gradient(1px 1px at 3% 55%, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 48% 95%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
-    radial-gradient(1px 1px at 63% 5%, rgba(255, 255, 255, 0.50) 0%, transparent 100%),
-    radial-gradient(1px 1px at 78% 32%, rgba(255, 255, 255, 0.20) 0%, transparent 100%),
-    radial-gradient(2px 2px at 92% 48%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
-    radial-gradient(1px 1px at 16% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 33% 25%, rgba(255, 255, 255, 0.40) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 50% 40%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 78%, rgba(255, 255, 255, 0.32) 0%, transparent 100%),
-    radial-gradient(1px 1px at 5% 88%, rgba(255, 255, 255, 0.28) 0%, transparent 100%),
-    radial-gradient(2px 2px at 40% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 100%),
-    radial-gradient(1px 1px at 72% 48%, rgba(255, 255, 255, 0.38) 0%, transparent 100%);
+.pag-tecnologia main>p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2.2rem;
+  margin-left: 0;
+  text-align: left;
 }
 
-/* flecha de scroll animada */
-@keyframes scroll-bounce {
-
-  0%,
-  100% {
-    opacity: 0.7;
-    transform: translateX(-50%) rotate(45deg) translateY(0);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) rotate(45deg) translateY(6px);
-  }
+.pag-tecnologia #misiont {
+  margin-bottom: 1.8rem;
 }
 
-/* flecha de scroll — restaurada con animación */
-.pag-inicio main>section:first-of-type::after {
-  display: block;
-  animation: scroll-bounce 1.8s ease-in-out infinite;
+.pag-tecnologia #misiont img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
-/* suprimir flecha en misiones */
-.pag-misiones main>section:first-of-type::after {
-  display: none;
-}
-
-/* números de estadísticas — color base */
-main>section:nth-of-type(2)>ul li h4 {
+.pag-tecnologia main>h3 {
+  font-size: clamp(1.4rem, 6vw, 2.4rem);
+  line-height: 1.05;
+  text-align: left;
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
   color: var(--color-text);
 }
 
-/* cards de vanguardia — borde accent + glow en hover */
-#vanguardia ul li {
-  border-left: 2px solid var(--color-accent);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
+.pag-tecnologia .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-bottom: 4.5rem;
 }
 
-#vanguardia ul li:hover {
-  background: var(--color-card-hover);
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.14), inset 0 0 0 1px rgba(59, 130, 246, 0.18);
-  transform: translateX(4px);
+.pag-tecnologia .card-tech {
+  background: #05070d;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 14px;
+  padding: 2.2rem 1.9rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pag-tecnologia .card-tech .icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.pag-tecnologia .card-tech h4 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text);
+}
+
+.pag-tecnologia .card-tech p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-soft);
 }
 
 /* ==========================================
-   RESPONSIVE
+   RESPONSIVE — 768px
    ========================================== */
-
 @media (min-width: 768px) {
 
   /* estadísticas en fila de 4 */
@@ -979,21 +914,11 @@ main>section:nth-of-type(2)>ul li h4 {
     flex: 1 1 calc(25% - 1rem);
   }
 
-  /* misión destacada — imagen + texto lado a lado */
+  /* misión destacada — fila */
   #programamarte {
     flex-direction: row;
     align-items: center;
     gap: 4rem;
-  }
-
-  /* vanguardia — 2 columnas */
-  #vanguardia ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  #vanguardia ul li {
-    flex: 1 1 calc(50% - 0.75rem);
   }
 
   /* misiones — 2 columnas */
@@ -1023,14 +948,99 @@ main>section:nth-of-type(2)>ul li h4 {
   footer>section:nth-child(3) {
     flex: 1;
     min-width: 120px;
+    padding-top: calc(32px + 0.75rem);
   }
 
   footer>iframe {
     flex: 1 1 100%;
     height: 240px;
   }
+
+  /* nav desktop — barra horizontal */
+  nav#principal button {
+    display: none;
+  }
+
+  nav#principal ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: unset;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    gap: 0.25rem;
+  }
+
+  nav#principal ul li a.active {
+    color: var(--color-text);
+    position: relative;
+  }
+
+  nav#principal ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0.9rem;
+    right: 0.9rem;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+  }
+
+  /* tecnología */
+  .pag-tecnologia main>h4,
+  .pag-tecnologia main>h2,
+  .pag-tecnologia main>p,
+  .pag-tecnologia #misiont {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  .pag-tecnologia main>h2 {
+    max-width: 800px;
+  }
+
+  .pag-tecnologia main>p {
+    max-width: 620px;
+  }
+
+  .pag-tecnologia #misiont img {
+    aspect-ratio: 16 / 7;
+  }
+
+  .pag-tecnologia main>h3 {
+    margin-top: -12rem;
+  }
+
+  .pag-tecnologia .cards-grid {
+    width: min(100% - 4rem, 1200px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
+/* ==========================================
+   RESPONSIVE — 900px
+   ========================================== */
+@media (min-width: 900px) {
+
+  /* vanguardia — 3 columnas */
+  #vanguardia ul {
+    flex-direction: row;
+  }
+
+  #vanguardia ul li {
+    flex: 1;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE — 1100px
+   ========================================== */
 @media (min-width: 1100px) {
 
   /* misiones — 3 columnas */
@@ -1038,7 +1048,7 @@ main>section:nth-of-type(2)>ul li h4 {
     flex: 1 1 calc(33.333% - 1.5rem);
   }
 
-  /* footer — fila completa con separador */
+  /* footer — fila sin wrap */
   footer {
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -1060,228 +1070,22 @@ main>section:nth-of-type(2)>ul li h4 {
     flex: 1.5;
     height: 220px;
   }
-}
 
-/* ==========================================
-   TECNOLOGÍA — textos centrados
-   ========================================== */
-
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p,
-.pag-tecnologia main>h3 {
-  text-align: center;
-}
-
-/* "Diseñado para lo imposible" más arriba sobre la imagen */
-.pag-tecnologia main>h3 {
-  margin-top: -10rem;
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .pag-tecnologia main>h3 {
-    margin-top: -12rem;
+  /* tecnología */
+  .pag-tecnologia main>h4 {
+    padding-top: 5rem;
   }
-}
 
-@media (min-width: 1100px) {
   .pag-tecnologia main>h3 {
     margin-top: -16rem;
   }
-}
 
-/* ==========================================
-   CAROUSEL — vanguardia
-   ========================================== */
-
-/* cancelar multi-columna del responsive */
-#vanguardia ul {
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-/* ocultar todos los items */
-#vanguardia ul li {
-  display: none;
-}
-
-/* mostrar solo el activo */
-#vanguardia ul li.carousel-active {
-  display: flex;
-  width: 100%;
-}
-
-/* controles del carousel */
-#vanguardia-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-#vanguardia-nav button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-#vanguardia-nav button:hover {
-  background: var(--color-card-hover);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-#vanguardia-counter {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: var(--color-text-muted);
-  min-width: 3rem;
-  text-align: center;
-}
-
-/* vanguardia — link y nav en la misma fila */
-#vanguardia {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#vanguardia>h4,
-#vanguardia>h2,
-#vanguardia>ul {
-  flex: 0 0 100%;
-}
-
-#vanguardia>a {
-  order: 3;
-  flex: 0 0 auto;
-  margin-right: auto;
-  margin-top: 0;
-  align-self: center;
-}
-
-#vanguardia-nav {
-  order: 4;
-  flex: 0 0 auto;
-  margin-top: 0;
-}
-
-/* footer — headings alineados: padding-top compensa el logo en col 1 */
-@media (min-width: 768px) {
-
-  footer>section:nth-child(2),
-  footer>section:nth-child(3) {
-    padding-top: calc(32px + 0.75rem);
-  }
-}
-
-/* nav desktop — barra horizontal, sin hamburgesa */
-@media (min-width: 768px) {
-  nav#principal button {
-    display: none;
+  .pag-tecnologia .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  nav#principal ul {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    min-width: unset;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    gap: 0.25rem;
-  }
-
-  /* link activo — subrayado blanco */
-  nav#principal ul li a.active {
-    color: var(--color-text);
-    position: relative;
-  }
-
-  nav#principal ul li a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: 0.9rem;
-    right: 0.9rem;
-    height: 2px;
-    background: var(--color-text);
-    border-radius: 1px;
-  }
-}
-
-/* ==========================================
-   DISEÑO REFERENCIA — vanguardia sin carousel
-   ========================================== */
-
-/* segunda línea del h3 en azul */
-#ungransalto h3 span {
-  color: var(--color-accent);
-}
-
-/* ocultar controles del carousel */
-#vanguardia-nav {
-  display: none;
-}
-
-/* mostrar todas las cards y numerarlas (mobile first) */
-#vanguardia ul {
-  counter-reset: tech-counter;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-#vanguardia ul li {
-  display: flex;
-  counter-increment: tech-counter;
-  position: relative;
-  padding-top: 3.5rem;
-}
-
-#vanguardia ul li.carousel-active {
-  width: auto;
-}
-
-#vanguardia ul li::before {
-  content: "0" counter(tech-counter);
-  position: absolute;
-  top: 1.25rem;
-  left: 1.5rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.07);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-family: var(--font-display);
-  pointer-events: none;
-}
-
-/* link centrado debajo de las cards */
-#vanguardia>a {
-  order: 3;
-  flex: 0 0 auto;
-  margin: 0.5rem auto 0;
-  align-self: center;
-}
-
-/* 3 columnas en desktop */
-@media (min-width: 900px) {
-  #vanguardia ul {
-    flex-direction: row;
-  }
-
-  #vanguardia ul li {
-    flex: 1;
+  .pag-tecnologia .card-tech {
+    min-height: 300px;
+    padding: 2.4rem;
   }
 }
