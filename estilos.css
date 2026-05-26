@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ==========================================
-   VARIABLES
+  VARIABLES
    ========================================== */
 :root {
   --color-bg: #000000;
@@ -30,10 +30,6 @@
   --container: 1200px;
   --header-h: 72px;
 }
-
-/* ==========================================
-   RESET
-   ========================================== */
 *,
 *::before,
 *::after {
@@ -174,7 +170,7 @@ p {
 }
 
 /* ==========================================
-   HEADER
+  HEADER
    ========================================== */
 body>header {
   position: fixed;
@@ -216,7 +212,7 @@ body>header>h1 {
 }
 
 /* ==========================================
-   NAV PRINCIPAL
+  NAV PRINCIPAL
    ========================================== */
 nav#principal {
   position: relative;
@@ -269,7 +265,7 @@ nav#principal ul li a:hover {
 }
 
 /* ==========================================
-   MAIN
+  MAIN
    ========================================== */
 main {
   display: flex;
@@ -278,7 +274,7 @@ main {
 }
 
 /* ==========================================
-   INDEX — HERO
+  INDEX — HERO
    ========================================== */
 main>section:first-of-type {
   position: relative;
@@ -659,9 +655,8 @@ footer iframe {
   padding-top: 3.5rem;
   margin-bottom: 0.8rem;
   text-align: left;
-  width: min(100% - 2.5rem, 1200px);
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pag-misiones main>h2 {
@@ -669,9 +664,8 @@ footer iframe {
   line-height: 0.95;
   text-align: left;
   margin-bottom: 1.5rem;
-  width: min(100% - 2.5rem, 1200px);
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pag-misiones main>p {
@@ -799,9 +793,6 @@ footer iframe {
 /* ==========================================
    PÁGINA TECNOLOGÍA
    ========================================== */
-.pag-tecnologia main>h4,
-.pag-tecnologia main>h2,
-.pag-tecnologia main>p,
 .pag-tecnologia main>h3,
 .pag-tecnologia #misiont,
 .pag-tecnologia .cards-grid {
@@ -812,10 +803,11 @@ footer iframe {
 
 .pag-tecnologia main>h4 {
   padding-top: 3.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   margin-bottom: 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.22em;
-  margin-left: 0;
   text-align: left;
 }
 
@@ -823,17 +815,19 @@ footer iframe {
   font-size: clamp(1.9rem, 10vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 1.2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   max-width: 520px;
-  margin-left: 0;
   text-align: left;
 }
 
 .pag-tecnologia main>p {
   font-size: 1rem;
   line-height: 1.8;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   max-width: 480px;
   margin-bottom: 2.2rem;
-  margin-left: 0;
   text-align: left;
 }
 
