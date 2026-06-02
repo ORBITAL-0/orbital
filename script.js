@@ -76,18 +76,16 @@ document.addEventListener('click', (e) => {
   }
 });
 
-const tarjetas = document.querySelectorAll(".card-tech");
+const cardsTecnologia = document.querySelectorAll(".card-tech");
 
-console.log(tarjetas.length); // debería mostrar 6
+cardsTecnologia.forEach(card => {
 
-tarjetas.forEach((tarjeta) => {
+  card.addEventListener("mouseover", () => {
+    card.classList.add("card-activa");
+  });
 
-    tarjeta.addEventListener("mouseover", function () {
-        this.classList.add("card-tech-iluminada");
-    });
-
-    tarjeta.addEventListener("mouseout", function () {
-        this.classList.remove("card-tech-iluminada");
-    });
+  card.addEventListener("mouseout", () => {
+    card.classList.remove("card-activa");
+  });
 
 });

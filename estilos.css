@@ -1107,8 +1107,12 @@ footer iframe {
     padding: 2.4rem;
   }
 }
-.card-tech-iluminada{
-    box-shadow: 0 0 30px #3b82f6;
-    border: 1px solid #60a5fa;
-    background-color: #131b2c;
+.card-activa{
+  background: var(--color-card-hover);
+  box-shadow: 0 0 30px rgba(59,130,246,0.25),
+              inset 0 0 0 1px rgba(59,130,246,0.2);
+  transform: translateY(-5px);
+}
+.pag-tecnologia .card-tech{
+  transition: all 0.3s ease;
 }
