@@ -75,3 +75,19 @@ document.addEventListener('click', (e) => {
     boton.setAttribute('aria-expanded', 'false');
   }
 });
+
+const tarjetas = document.querySelectorAll(".card-tech");
+
+console.log(tarjetas.length); // debería mostrar 6
+
+tarjetas.forEach((tarjeta) => {
+
+    tarjeta.addEventListener("mouseover", function () {
+        this.classList.add("card-tech-iluminada");
+    });
+
+    tarjeta.addEventListener("mouseout", function () {
+        this.classList.remove("card-tech-iluminada");
+    });
+
+});
