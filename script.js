@@ -75,18 +75,3 @@ document.addEventListener('click', (e) => {
     boton.setAttribute('aria-expanded', 'false');
   }
 });
-// Iluminar cards de tecnología al pasar el cursor
-
-const cardsTech = document.querySelectorAll(".card-tech");
-
-cardsTech.forEach(card => {
-
-  card.addEventListener("mouseenter", () => {
-    card.classList.add("card-tech-iluminada");
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.classList.remove("card-tech-iluminada");
-  });
-
-});
