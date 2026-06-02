@@ -48,3 +48,30 @@ function animateCounters() {
     }, frameDuration);
   });
 }
+
+// menu hamburguesa en telefono //
+const nav = document.querySelector('#principal');
+const boton = nav.querySelector('button');
+const menu = nav.querySelector('ul');
+
+// abrir / cerrar al tocar el botón
+boton.addEventListener('click', () => {
+  const abierto = menu.classList.toggle('open');
+  boton.setAttribute('aria-expanded', abierto);
+});
+
+// cerrar al tocar una opción del menú
+menu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    boton.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// cerrar al tocar fuera del menú
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target)) {
+    menu.classList.remove('open');
+    boton.setAttribute('aria-expanded', 'false');
+  }
+});
