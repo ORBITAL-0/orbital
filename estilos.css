@@ -319,6 +319,7 @@ main>section:first-of-type h4 {
 
 main>section:first-of-type h2 {
   margin-bottom: 1.25rem;
+  font-size: clamp(2.5rem, 7.5vw, 5rem);
 }
 
 main>section:first-of-type p {
