@@ -445,6 +445,17 @@ main>section:nth-of-type(2)>ul li a {
   border-color: var(--color-accent);
 }
 
+#programamarte article a::after {
+  content: "→";
+  margin-left: 0.5rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+#programamarte article a:hover::after {
+  transform: translateX(4px);
+}
+
 /* ==========================================
    INDEX — UN GRAN SALTO
    ========================================== */
