@@ -1107,3 +1107,10 @@ footer iframe {
     padding: 2.4rem;
   }
 }
+.card-tech-iluminada {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+  border-color: rgba(59, 130, 246, 0.8);
+  background: #131b2c;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
