@@ -846,11 +846,8 @@ footer iframe {
   text-align: left;
 }
 
-/* imagen full-width: sale del contenedor con márgenes negativos */
 .pag-tecnologia #misiont {
-  width: calc(100% + 2.5rem);
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
+  width: 100%;
   margin-bottom: 1.8rem;
 }
 
@@ -1023,7 +1020,7 @@ footer iframe {
 
   /* bleed actualizado para 2rem de padding */
   .pag-tecnologia #misiont {
-    width: calc(100% + 4rem);
+    width: 100%;
     margin-left: -2rem;
     margin-right: -2rem;
   }
