@@ -863,8 +863,8 @@ footer iframe {
   font-size: clamp(1.4rem, 6vw, 2.4rem);
   line-height: 1.05;
   text-align: center;
-  margin-top: -10rem;
-  margin-bottom: 4rem;
+  top: -10rem;
+  margin-bottom: 0;
   position: relative;
   z-index: 2;
   color: var(--color-text);
@@ -1031,7 +1031,7 @@ footer iframe {
   }
 
   .pag-tecnologia main>h3 {
-    margin-top: -12rem;
+    top: -12rem;
   }
 
   .pag-tecnologia .cards-grid {
@@ -1095,7 +1095,7 @@ footer iframe {
   }
 
   .pag-tecnologia main>h3 {
-    margin-top: -16rem;
+    top: -16rem;
   }
 
   .pag-tecnologia .cards-grid {
