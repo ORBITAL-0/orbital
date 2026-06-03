@@ -1,4 +1,4 @@
-// El script está al final del body — DOM ya está disponible al ejecutarse
+
 
 // ── Nav — marcar link activo según página actual ─────────────────────────
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
