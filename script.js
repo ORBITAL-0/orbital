@@ -1,5 +1,3 @@
-
-
 // ── Nav — marcar link activo según página actual ─────────────────────────
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('nav#principal ul li a').forEach(link => {
